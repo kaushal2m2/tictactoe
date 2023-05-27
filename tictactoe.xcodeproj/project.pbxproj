@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8300B29D2A1A172100B67400 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300B29B2A1A172100B67400 /* Board.cpp */; };
+		8300B2A02A1A180100B67400 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300B29E2A1A180100B67400 /* Node.cpp */; };
+		8300B2A22A1A21C000B67400 /* AiDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8300B2A12A1A21C000B67400 /* AiDriver.cpp */; };
+		836BB3902A209FE6000FD9F1 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836BB38F2A209FE6000FD9F1 /* OptionsViewController.swift */; };
+		838FAB752A1D76D700101FD6 /* CppWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 838FAB742A1D76D700101FD6 /* CppWrapper.mm */; };
 		83ACB75F2A02638200D5BE96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACB75E2A02638200D5BE96 /* AppDelegate.swift */; };
 		83ACB7612A02638200D5BE96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACB7602A02638200D5BE96 /* SceneDelegate.swift */; };
 		83ACB7632A02638200D5BE96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACB7622A02638200D5BE96 /* ViewController.swift */; };
@@ -36,6 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8300B29A2A1A172100B67400 /* tictactoe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tictactoe-Bridging-Header.h"; sourceTree = "<group>"; };
+		8300B29B2A1A172100B67400 /* Board.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		8300B29C2A1A172100B67400 /* Board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Board.hpp; sourceTree = "<group>"; };
+		8300B29E2A1A180100B67400 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		8300B29F2A1A180100B67400 /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		8300B2A12A1A21C000B67400 /* AiDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AiDriver.cpp; sourceTree = "<group>"; };
+		8300B2A32A1C5A9500B67400 /* AiDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AiDriver.h; sourceTree = "<group>"; };
+		836BB38F2A209FE6000FD9F1 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		838FAB732A1D759000101FD6 /* CppWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CppWrapper.h; sourceTree = "<group>"; };
+		838FAB742A1D76D700101FD6 /* CppWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CppWrapper.mm; sourceTree = "<group>"; };
 		83ACB75B2A02638200D5BE96 /* tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83ACB75E2A02638200D5BE96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83ACB7602A02638200D5BE96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,13 +114,23 @@
 		83ACB75D2A02638200D5BE96 /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				838FAB732A1D759000101FD6 /* CppWrapper.h */,
+				838FAB742A1D76D700101FD6 /* CppWrapper.mm */,
 				83ACB75E2A02638200D5BE96 /* AppDelegate.swift */,
 				83ACB7602A02638200D5BE96 /* SceneDelegate.swift */,
 				83ACB7622A02638200D5BE96 /* ViewController.swift */,
 				83ACB7642A02638200D5BE96 /* Main.storyboard */,
+				836BB38F2A209FE6000FD9F1 /* OptionsViewController.swift */,
+				8300B29B2A1A172100B67400 /* Board.cpp */,
+				8300B2A12A1A21C000B67400 /* AiDriver.cpp */,
+				8300B2A32A1C5A9500B67400 /* AiDriver.h */,
+				8300B29E2A1A180100B67400 /* Node.cpp */,
+				8300B29F2A1A180100B67400 /* Node.hpp */,
+				8300B29C2A1A172100B67400 /* Board.hpp */,
 				83ACB7672A02638300D5BE96 /* Assets.xcassets */,
 				83ACB7692A02638300D5BE96 /* LaunchScreen.storyboard */,
 				83ACB76C2A02638300D5BE96 /* Info.plist */,
+				8300B29A2A1A172100B67400 /* tictactoe-Bridging-Header.h */,
 			);
 			path = tictactoe;
 			sourceTree = "<group>";
@@ -195,6 +220,7 @@
 				TargetAttributes = {
 					83ACB75A2A02638200D5BE96 = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
 					};
 					83ACB7702A02638300D5BE96 = {
 						CreatedOnToolsVersion = 14.3;
@@ -259,8 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				83ACB7632A02638200D5BE96 /* ViewController.swift in Sources */,
+				836BB3902A209FE6000FD9F1 /* OptionsViewController.swift in Sources */,
+				8300B2A22A1A21C000B67400 /* AiDriver.cpp in Sources */,
 				83ACB75F2A02638200D5BE96 /* AppDelegate.swift in Sources */,
+				8300B29D2A1A172100B67400 /* Board.cpp in Sources */,
+				838FAB752A1D76D700101FD6 /* CppWrapper.mm in Sources */,
 				83ACB7612A02638200D5BE96 /* SceneDelegate.swift in Sources */,
+				8300B2A02A1A180100B67400 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +466,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C98R3LCRK8;
@@ -453,6 +485,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kaushal2m2.tictactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "tictactoe/tictactoe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C98R3LCRK8;
@@ -481,6 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kaushal2m2.tictactoe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "tictactoe/tictactoe-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
