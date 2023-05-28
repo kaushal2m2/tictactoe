@@ -50,8 +50,9 @@ void AiDriver::dfsSelect(Node * curr){
         nAdd = curr->succ.size() == 0 ? 1 : (int)(curr->succ.size());    //nAdd for backpropogation
         for(int i = 0; i < curr->succ.size(); i++){
             Board * nx = new Board(*(curr->succ[i]->b));
-            curr->succ[i]->b->wins += simRandom(nx);   //simulation, and store values in winAdd for backpropogation
+            curr->succ[i]->b->wins = simRandom(nx);   //simulation, and store values in winAdd for backpropogation
             winAdd += curr->succ[i]->b->wins;
+            delete nx;
         }
         return;
     }
@@ -91,9 +92,13 @@ int AiDriver::getMove(int s1, int s2, int s3, int s4, int s5, int s6, int s7, in
         t++;
     }
     int next = 0;
-    for(int a = 0; a < curr->succ.size(); a++)
-        if(curr->succ[next]->b->n < curr->succ[a]->b->n)      //pick the move which had most iterations
+    for(int a = 0; a < curr->succ.size(); a++){
+        if(curr->succ[next]->b->n < curr->succ[a]->b->n){      //pick the move which had most iterations
             next = a;
+        }
+        cout << curr->succ[a]->b->n << endl;
+    }
+    cout << endl << curr->succ[next]->b->n << endl << endl << endl;
     int ret = 0;
     for(int i = 0; i < 3; i++)
         for(int j = 0; j < 3; j++)

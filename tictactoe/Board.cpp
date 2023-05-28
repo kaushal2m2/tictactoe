@@ -33,9 +33,9 @@ vector<Board *> Board::genNext()
                     diff->turn = 'X';
                 nx.push_back(diff);
                 if (diff->done() == -1)
-                    wins = -9999999; // if loss for AI
+                    diff->wins = diff->n = -9999999; // if loss for AI
                 if (diff->done() == 1)
-                    wins = 9999999; // if win for AI
+                    diff->wins = diff->n = 9999999; // if win for AI
             }
     if (nx.size() == 0)
         return nx;
@@ -45,10 +45,10 @@ vector<Board *> Board::genNext()
         mx = max(mx, nd->wins);
         mn = min(mn, nd->wins);
     }
-    if (mx < -999999)
-        wins = -9999999; // if no states that dont lose
+    if (mx < -999999 || (turn == 'X' && mn < -999999))
+        wins = n = -9999999; // if no states that dont lose
     if (mn > 999999)
-        wins = 9999999; // if no states that dont win
+        wins = n = 9999999; // if no states that dont win
     return nx;
 }
 
@@ -64,8 +64,8 @@ bool Board::equal(Board &_b)
 double Board::EV(int t)
 {
     if (turn == 'O')
-        return -1 * wins / n + sqrt(2 * log(t) / n);
-    return wins / n + sqrt(2 * log(t) / n);
+        return -1 * wins / n + sqrt(2 * log(t) / abs(n));
+    return wins / n + sqrt(2 * log(t) / abs(n));
 }
 
 double Board::done()
@@ -97,5 +97,5 @@ bool Board::diag()
 }
 double Board::win()
 {
-    return turn == 'X' ? 1 : -1;
+    return this->turn == 'X' ? 1 : -1;
 }

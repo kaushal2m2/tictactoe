@@ -72,8 +72,7 @@ class ViewController: UIViewController {
         return true
     }
     
-    func checkForVictory(_ s :String) -> Bool
-    {
+    func checkForVictory(_ s :String) -> Bool {
         // Horizontal Victory
         if thisSymbol(sqr[0], s) && thisSymbol(sqr[1], s) && thisSymbol(sqr[2], s)
         {
@@ -116,8 +115,7 @@ class ViewController: UIViewController {
     }
     
     
-    func thisSymbol(_ button: UIButton, _ symbol: String) -> Bool
-    {
+    func thisSymbol(_ button: UIButton, _ symbol: String) -> Bool {
         return button.title(for: .normal) == symbol
     }
     
